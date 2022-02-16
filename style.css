@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+    
+}
+html, body{
+    overflow-x: hidden;
+    height: 100%;
+}
+body{
+    background: #fff;
+   margin: 0;
+   padding: 0;
+   font-family: sans-serif;
+}
+.navbar{
+    background: #e74c3c;
+    width: 100%;
+    height: 50px;
+    z-index: 1;
+
+}
+.tobaco{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.main{
+    height: 100%;
+    padding: 20px 100px;
+    
+}
+#sidebarMenu{
+    height: 100%;
+    position: fixed;
+    width: 250px;
+    margin-top: 50px;
+    left: 0;
+    top: 0;
+    background: #3498db;
+    transform: translateX(-250px);
+    transition:transform 250ms ease-in-out;
+}
+#opensidebarMenu:checked ~ #sidebarMenu{
+    transform: translateX(0);
+}
+.menu{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li{
+    color: whitesmoke;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.10);
+   
+}
+.menu li a {
+    color: whitesmoke;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px;
+  
+}
+.SidebarIconToggle{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+.sprinter{
+    height: 3px;
+    background: #fff;
+    transition: all 0.3s;
+}
+.sprinter.middel,
+.sprinter.bottom{
+    margin-top: 3px;
+}
+#opensidebarMenu:checked ~ .SidebarIconToggle > .sprinter.middel{
+    opacity: 0;
+}
+#opensidebarMenu:checked ~ .SidebarIconToggle > .sprinter.top{
+   transform: rotate(130deg);
+   margin-top: 8px;
+}
+#opensidebarMenu:checked ~ .SidebarIconToggle > .sprinter.bottom{
+    transform: rotate(-130deg);
+    margin-top: -8px;
+ }
