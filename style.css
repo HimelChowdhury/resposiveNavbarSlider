@@ -91,3 +91,6 @@ body{
     transform: rotate(-130deg);
     margin-top: -8px;
  }
+ .check{
+     display: none;
+ }
